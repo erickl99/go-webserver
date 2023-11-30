@@ -5,9 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="static/styles.css">
+    <script src="static/clipboard.js" defer></script>
   </head>
   <body>
-  <h1>Welcome to the Clipboard</h1>
+  <h1>Universal Clipboard</h1>
   <p>This page allows you to save your clipboard to the server and then copy the contents to your clipboard. Will need to be careful how we implement this for security concerns.</p>
+  <div id="clipboard-list">
+    {{ range $v := .}}
+    <p>{{$v}}</p>
+    {{ end }}
+  </div>
+  <button type="button">Click Me!</button>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" class="h-4 w-4 hidden group-hover:block text-label-2 dark:text-dark-label-2 hover:text-label-1 dark:hover:text-dark-label-1"><path fill-rule="evenodd" d="M11.3 8.3H19a3 3 0 013 3V19a3 3 0 01-3 3h-7.7a3 3 0 01-3-3v-7.7a3 3 0 013-3zm0 2a1 1 0 00-1 1V19a1 1 0 001 1H19a1 1 0 001-1v-7.7a1 1 0 00-1-1h-7.7zm-5.6 3.4a1 1 0 110 2h-.9A2.8 2.8 0 012 12.9V4.8A2.8 2.8 0 014.8 2h8.1a2.8 2.8 0 012.8 2.8v.9a1 1 0 11-2 0v-.9a.8.8 0 00-.8-.8H4.8a.8.8 0 00-.8.8v8.1a.8.8 0 00.8.8h.9z" clip-rule="evenodd"></path></svg>
   </body>
 </html>

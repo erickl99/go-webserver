@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Japanese SRS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Homegrown SRS System</h1>
+    <p>This page allows you to review Japanese decks.</p>
+    {{ range $key, $value := . }}
+      <h2>{{ $key }}</h2>
+      <p>{{ $value }}</p>
+    {{ end }}
+  </body>
+</html>
